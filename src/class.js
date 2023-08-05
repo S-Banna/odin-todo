@@ -5,4 +5,8 @@ class todoconstruct {
     }
 }
 
-export { todoconstruct };
+class projectconstruct {
+    constructor(title, name) {this.title = [], this.name = name}
+}
+
+export { todoconstruct, projectconstruct };

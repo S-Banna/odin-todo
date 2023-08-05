@@ -10,6 +10,7 @@ function DOMCreator(project) {
         datePick.type = 'date';
         datePick.style.marginLeft = '620px';
         remove.textContent = 'Remove';
+        remove.style.fontSize = '14px';
         let div2 = document.createElement('div');
         let title2 = document.createElement('div');
         title2.textContent = todo.title;
