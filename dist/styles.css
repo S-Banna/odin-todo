@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-Regular.woff2') format('woff2'),
+        url('Ubuntu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: Ubuntu, sans-serif;
+}
+
+#header {
+    display: flex;
+    background-color: rgb(167, 249, 255);
+    align-items: center;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 30px 0px 30px 10px;
+}
+
+#footer {
+    display: flex;
+    background-color: rgb(167, 249, 255);
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+
+#content {
+    display: flex;
+    height: 413px;
+}
+
+#projTab {
+    width: 20%;
+    background-color: rgb(185, 185, 185);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#main2 {
+    width: 70%;
+    border-color: rgb(224, 224, 224);
+    display: flex;
+    gap: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    flex-direction: column;
+}
+
+#button {
+    background-color: rgb(224, 224, 224);
+}
+
+#ToDoButton {
+    width: 120px;
+    background-color: rgb(224, 224, 224);
+}
+
+.todoclass {
+    display: flex;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    justify-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.hide {display: none;}
+
+#main {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
