@@ -1,7 +1,6 @@
 class todoconstruct {
-    constructor(title, id) {
+    constructor(title) {
         this.title = title;
-        this.id = id;
     }
 }
 

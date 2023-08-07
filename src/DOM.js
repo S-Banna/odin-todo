@@ -8,7 +8,7 @@ function DOMCreator(project) {
         });
         let datePick = document.createElement("input");
         datePick.type = 'date';
-        datePick.style.marginLeft = '620px';
+        datePick.style.margin = 'auto';
         remove.textContent = 'Remove';
         remove.style.fontSize = '14px';
         let div2 = document.createElement('div');
