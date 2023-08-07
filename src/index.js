@@ -56,13 +56,13 @@ let createToDo = document.getElementById('ToDoButton');
 createToDo.addEventListener('click', create);
 
 function DOMCreator(project) {
-    main.innerHTML = ''; // Assuming you have a DOM element with the id 'main'
+    main.innerHTML = '';
 
-    project.forEach(function (todo, index) { // Added the index parameter
+    project.forEach(function (todo, index) { 
         let remove = document.createElement("button");
         remove.textContent = ('Remove');
         remove.addEventListener('click', () => {
-            project.splice(index, 1); // Use the index to remove the correct todo
+            project.splice(index, 1); 
             DOMCreator(project);
         });
 
@@ -127,27 +127,22 @@ function saveToLocalStorage() {
     localStorage.setItem('projectList', serializedProjectList);
 }
 
-// Retrieve and load data from localStorage
 function loadFromLocalStorage() {
     const serializedProjectList = localStorage.getItem('projectList');
     if (serializedProjectList) {
         projectList = JSON.parse(serializedProjectList);
-        // You might need to update your DOM rendering based on the loaded data
         DOMProjects(projectList);
     }
 }
 
-// Call this function when the user adds/removes a project or to-do item
 function updateLocalStorageAndDOM() {
     saveToLocalStorage();
     DOMProjects(projectList);
-    DOMCreator(current.title); // Update the DOM
+    DOMCreator(current.title); 
 }
 
-// Call this function when your app initializes
 function initializeApp() {
-    loadFromLocalStorage(); // Load data from localStorage
-    // Initialize your event listeners, DOM, etc.
+    loadFromLocalStorage(); 
 }
 
 initializeApp();
