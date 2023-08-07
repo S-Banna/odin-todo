@@ -63,7 +63,7 @@ button {
 }
 
 #projTab {
-    width: 20%;
+    width: 30%;
     background-color: rgb(185, 185, 185);
     display: flex;
     flex-direction: column;
@@ -72,7 +72,7 @@ button {
 }
 
 #main2 {
-    width: 80%;
+    width: 70%;
     border: 2px solid rgb(139, 139, 139);
     display: flex;
     gap: 10px;

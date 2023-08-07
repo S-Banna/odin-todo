@@ -5,7 +5,7 @@ class todoconstruct {
 }
 
 class projectconstruct {
-    constructor(title, name) {this.title = [], this.name = name}
+    constructor(name) {this.title = [], this.name = name}
 }
 
 export { todoconstruct, projectconstruct };
