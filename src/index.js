@@ -1,15 +1,12 @@
 import { todoconstruct, projectconstruct } from "./class";
 
-let project = new projectconstruct('Project 1');
-let current = project;
-let projectList = [project];
+let current = null;
+let projectList = [];
 let projList = document.getElementById('extraProj');
 let name = document.getElementById("DOMname");
-
-DOMProjects(projectList);
-
 let tab = document.getElementById("projTab");
 let projCreate = document.getElementById("button3");
+
 projCreate.addEventListener('click', crea => {
     input2.classList.remove("hide");
     but2.classList.remove("hide");
@@ -17,6 +14,7 @@ projCreate.addEventListener('click', crea => {
 
 let input2 = document.getElementById("input2");
 let but2 = document.getElementById("but2");
+
 but2.addEventListener('click', crea => {
     let i = projectList.length;
     let proj = new projectconstruct(input2.value);
@@ -119,7 +117,6 @@ function DOMProjects(projectList) {
             name.textContent = current.name;
         }
     });
-    name.textContent = current.name;
 }
 
 function saveToLocalStorage() {
@@ -131,14 +128,22 @@ function loadFromLocalStorage() {
     const serializedProjectList = localStorage.getItem('projectList');
     if (serializedProjectList) {
         projectList = JSON.parse(serializedProjectList);
+        console.log("sus")
+        // if (projectList.length > 0) {
+        //     const previousCurrentName = current.name;
+        //     current = projectList.find(project => project.name === previousCurrentName) || projectList[0];
+        // }
         DOMProjects(projectList);
+        current = projectList[0];
+        DOMCreator(current.title);
+        name.textContent = current.name;
     }
 }
 
 function updateLocalStorageAndDOM() {
     saveToLocalStorage();
+    current = projectList.find(project => project.name === current.name) || projectList[0];
     DOMProjects(projectList);
-    DOMCreator(current.title); 
 }
 
 function initializeApp() {
